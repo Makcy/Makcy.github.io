@@ -65,7 +65,7 @@
 安装完毕后brew安装路径目录如图所示：">
 <meta property="og:image" content="http://yoursite.com/images/go1.png">
 <meta property="og:image" content="http://yoursite.com/images/go2.png">
-<meta property="og:updated_time" content="2015-11-12T13:28:52.000Z">
+<meta property="og:updated_time" content="2015-11-12T13:35:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go语言总结">
 <meta name="twitter:description" content="安装方式（OSX）1、安装Xcode，需要内置GCC编译Golang中Go和C语言的联合开发模块（Go1.5版本已经实现全面Go语言开发）2、Mac下直接通过Homebrew—&amp;gt;brew install go
@@ -299,14 +299,11 @@
 </blockquote>
 <hr>
 <h2 id="Struct与interface类型">Struct与interface类型</h2><blockquote>
-<p><strong>1、</strong>在Go中没有Class 关键字，但是通过Struct结构实现了Class 的功能。<br><strong>2、</strong>如果需要实现继承，只需要进行Struct的嵌套<br><strong>3、</strong>interface就是一组抽象方法的集合，它必须由其他非interface类型实现，而不能自我实现，其实本质还是接口，只是写法不同并且添加了新用法罢了<br><strong>4、</strong>空interface(interface{})不包含任何的method，正因为如此，所有的类型都实现了空interface。空interface在我们需要存储任意类型的数值的时候相当有用，因为它可以存储任意类型的数值。</p>
-<h2 id="5、如若想取得空interface中的值，可通过断言语句来进行依次判断"><strong>5、</strong>如若想取得空interface中的值，可通过断言语句来进行依次判断</h2></blockquote>
+<p><strong>1、</strong>在Go中没有Class 关键字，但是通过Struct结构实现了Class 的功能。<br><strong>2、</strong>如果需要实现继承，只需要进行Struct的嵌套<br><strong>3、</strong>interface就是一组抽象方法的集合，它必须由其他非interface类型实现，而不能自我实现，其实本质还是接口，只是写法不同并且添加了新用法罢了<br><strong>4、</strong>空interface(interface{})不包含任何的method，正因为如此，所有的类型都实现了空interface。空interface在我们需要存储任意类型的数值的时候相当有用，因为它可以存储任意类型的数值。<br><strong>5、</strong>如若想取得空interface中的值，可通过断言语句来进行依次判断</p>
+</blockquote>
+<hr>
 <h2 id="Go独有特性">Go独有特性</h2><blockquote>
-<p><strong>1、</strong>在Go中没有Class 关键字，但是通过Struct结构实现了Class 的功能，Struct和Method相关的定义如右图所示</p>
-<p><strong>2、</strong>如果需要实现继承，只需要进行Struct的嵌套就行了</p>
-<p><strong>3、</strong>interface就是一组抽象方法的集合，它必须由其他非interface类型实现，而不能自我实现，其实本质还是接口，只是写法不同并且添加了新用法罢了</p>
-<p><strong>4、</strong>空interface(interface{})不包含任何的method，正因为如此，所有的类型都实现了空interface。空interface在我们需要存储任意类型的数值的时候相当有用，因为它可以存储任意类型的数值。</p>
-<p><strong>5、</strong>如若想取得空interface中的值，可通过断言语句来进行依次判断</p>
+<p><strong>1、</strong>函数能有多个返回值，且调用时可用“_”下划线占位，进行忽略只接收想要的返回值<br><strong>2、</strong>原生支持UTF-8编码<br><strong>3、</strong>函数中defer关键字能，在函数执行完毕之后，进行调用，类似于析构函数<br><strong>4、</strong>可用For 语句配合 range + 集合类型，来进行遍历<br><strong>5、</strong>if条件语句中可使用赋值语句<br><strong>6、</strong>函数中的参数，允许指针传递<br><strong>7、</strong>go项目的main包中必须有main函数.每个package中默认有一个Init初始化函数，可自定义多个init函数，但是业界规范最好是只用一个</p>
 </blockquote>
 <hr>
 <h2 id="Go一些值得注意的小细节">Go一些值得注意的小细节</h2><blockquote>
@@ -475,7 +472,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方式（OSX）"><span class="nav-number">1.</span> <span class="nav-text">安装方式（OSX）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区间结构"><span class="nav-number">2.</span> <span class="nav-text">工作区间结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码结构"><span class="nav-number">3.</span> <span class="nav-text">代码结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方包管理"><span class="nav-number">4.</span> <span class="nav-text">第三方包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go的优势"><span class="nav-number">5.</span> <span class="nav-text">Go的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发机制"><span class="nav-number">6.</span> <span class="nav-text">并发机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程间的通信–Channel"><span class="nav-number">7.</span> <span class="nav-text">线程间的通信–Channel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struct与interface类型"><span class="nav-number">8.</span> <span class="nav-text">Struct与interface类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、如若想取得空interface中的值，可通过断言语句来进行依次判断"><span class="nav-number">9.</span> <span class="nav-text">5、如若想取得空interface中的值，可通过断言语句来进行依次判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go独有特性"><span class="nav-number">10.</span> <span class="nav-text">Go独有特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go一些值得注意的小细节"><span class="nav-number">11.</span> <span class="nav-text">Go一些值得注意的小细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基于Go的Web框架"><span class="nav-number">12.</span> <span class="nav-text">一些基于Go的Web框架</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方式（OSX）"><span class="nav-number">1.</span> <span class="nav-text">安装方式（OSX）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区间结构"><span class="nav-number">2.</span> <span class="nav-text">工作区间结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码结构"><span class="nav-number">3.</span> <span class="nav-text">代码结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方包管理"><span class="nav-number">4.</span> <span class="nav-text">第三方包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go的优势"><span class="nav-number">5.</span> <span class="nav-text">Go的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发机制"><span class="nav-number">6.</span> <span class="nav-text">并发机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程间的通信–Channel"><span class="nav-number">7.</span> <span class="nav-text">线程间的通信–Channel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struct与interface类型"><span class="nav-number">8.</span> <span class="nav-text">Struct与interface类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go独有特性"><span class="nav-number">9.</span> <span class="nav-text">Go独有特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go一些值得注意的小细节"><span class="nav-number">10.</span> <span class="nav-text">Go一些值得注意的小细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些基于Go的Web框架"><span class="nav-number">11.</span> <span class="nav-text">一些基于Go的Web框架</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
