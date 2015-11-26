@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="C#,Design pattern,Unity3D," />
+  <meta name="keywords" content="Life," />
 
 
 
@@ -53,22 +53,21 @@
 
 
 
-<meta name="description" content="之前在CSDN写的一些设计模式相关的学习笔记,和Unity引擎插件的简单使用 
-
-传送门~。~">
+<meta name="description" content="最近跑步的时候发现手机QQ健康中会自动记录每天的步数，并会生成一波排行榜，然而每天的排行榜中总有些好友奇葩数据，问了几个小伙伴的排行榜也都有这种情况，比如这样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式和Unity插件">
-<meta property="og:url" content="http://yoursite.com/2015/11/23/UnityCsdn/index.html">
+<meta property="og:title" content="QQ健康刷步数方法(仅Android无需root)">
+<meta property="og:url" content="http://yoursite.com/2015/11/26/RuningCount/index.html">
 <meta property="og:site_name" content="Hello Life">
-<meta property="og:description" content="之前在CSDN写的一些设计模式相关的学习笔记,和Unity引擎插件的简单使用 
-
-传送门~。~">
-<meta property="og:updated_time" content="2015-11-23T09:55:09.000Z">
+<meta property="og:description" content="最近跑步的时候发现手机QQ健康中会自动记录每天的步数，并会生成一波排行榜，然而每天的排行榜中总有些好友奇葩数据，问了几个小伙伴的排行榜也都有这种情况，比如这样">
+<meta property="og:image" content="http://yoursite.com/images/run1.png">
+<meta property="og:image" content="http://yoursite.com/images/run2.png">
+<meta property="og:image" content="http://yoursite.com/images/run3.png">
+<meta property="og:image" content="http://yoursite.com/images/run4.png">
+<meta property="og:image" content="http://yoursite.com/images/run5.png">
+<meta property="og:updated_time" content="2015-11-26T03:52:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式和Unity插件">
-<meta name="twitter:description" content="之前在CSDN写的一些设计模式相关的学习笔记,和Unity引擎插件的简单使用 
-
-传送门~。~">
+<meta name="twitter:title" content="QQ健康刷步数方法(仅Android无需root)">
+<meta name="twitter:description" content="最近跑步的时候发现手机QQ健康中会自动记录每天的步数，并会生成一波排行榜，然而每天的排行榜中总有些好友奇葩数据，问了几个小伙伴的排行榜也都有这种情况，比如这样">
 
 
 
@@ -80,7 +79,7 @@
   };
 </script>
 
-  <title> 设计模式和Unity插件 | Hello Life </title>
+  <title> QQ健康刷步数方法(仅Android无需root) | Hello Life </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -210,7 +209,7 @@
             
             
               
-                设计模式和Unity插件
+                QQ健康刷步数方法(仅Android无需root)
               
             
           </h1>
@@ -219,8 +218,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-23T17:42:45+08:00" content="2015-11-23">
-              2015-11-23
+            <time itemprop="dateCreated" datetime="2015-11-26T10:48:35+08:00" content="2015-11-26">
+              2015-11-26
             </time>
           </span>
 
@@ -230,8 +229,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/23/UnityCsdn/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/23/UnityCsdn/" itemprop="commentsCount"></span>
+                <a href="/2015/11/26/RuningCount/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/26/RuningCount/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -250,10 +249,19 @@
       
 
       
-        <span itemprop="articleBody"><p><strong> 之前在CSDN写的一些设计模式相关的学习笔记,和Unity引擎插件的简单使用 </strong></p>
+        <span itemprop="articleBody"><p>最近跑步的时候发现手机QQ健康中会自动记录每天的步数，并会生成一波排行榜，然而每天的排行榜中总有些好友奇葩数据，问了几个小伙伴的排行榜也都有这种情况，比如这样<a id="more"></a><br><img src="/images/run1.png" alt="image"><br>或是这样(数据为大学妹子，并非运动员)<br><img src="/images/run2.png" alt="image"><br>所以花时间研究了下，并没有想象中的复杂，分这么几步</p>
+<ul>
+<li>利用QQ健康可同步第三方数据的特性，下载一个春雨计步器，登录后象征性的摇几次，然后关闭应用</li>
+<li>下载ES文件浏览器(<code>注意在设置中勾选显示隐藏文件</code>)</li>
+<li><p>打开根目录路径,如果没安装在SD卡中可先把应用移至SD卡后打开该目录，或直接全局搜索  记录文件(如2015-11-26)</p>
 <blockquote>
-<p><a href="http://blog.csdn.net/saveword" target="_blank" rel="external">传送门~。~</a></p>
+<p>/mnt/sdcard/.Pedometer/.cypedometer/</p>
 </blockquote>
+</li>
+<li><p>该目录如图，包含每天的步数记录文件，用于初始化App数据，打开后如图所以，第一个为固定字段，之后全是步数（不加密难道是出于性能考虑?）<br><img src="/images/run3.png" alt="image"><br><img src="/images/run4.png" alt="image"><br><img src="/images/run5.png" alt="image"></p>
+</li>
+<li>修改后将其替换(<code>注意文件名相同</code>)，重启应用发现记录已经更改，再一次切换<code>关联QQ健康</code>按钮，数据上传成功(没成功的话先退出登录，直接点击关联按钮)</li>
+</ul>
 </span>
       
     </div>
@@ -262,11 +270,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag">#C#</a>
-          
-            <a href="/tags/Design-pattern/" rel="tag">#Design pattern</a>
-          
-            <a href="/tags/Unity3D/" rel="tag">#Unity3D</a>
+            <a href="/tags/Life/" rel="tag">#Life</a>
           
         </div>
       
@@ -275,17 +279,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/12/Golang/" rel="next" title="Go语言知识点和踩坑总结">
-                <i class="fa fa-chevron-left"></i> Go语言知识点和踩坑总结
+              <a href="/2015/11/23/UnityCsdn/" rel="next" title="设计模式和Unity插件">
+                <i class="fa fa-chevron-left"></i> 设计模式和Unity插件
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/26/RuningCount/" rel="prev" title="QQ健康刷步数方法(仅Android无需root)">
-                QQ健康刷步数方法(仅Android无需root) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -312,8 +312,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/23/UnityCsdn/"
-           data-title="设计模式和Unity插件" data-url="http://yoursite.com/2015/11/23/UnityCsdn/">
+      <div class="ds-thread" data-thread-key="2015/11/26/RuningCount/"
+           data-title="QQ健康刷步数方法(仅Android无需root)" data-url="http://yoursite.com/2015/11/26/RuningCount/">
       </div>
     
   </div>
