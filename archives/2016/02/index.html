@@ -54,7 +54,7 @@
 <meta name="description" content="上善若水，人淡如菊">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hello Life">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2016/02/index.html">
 <meta property="og:site_name" content="Hello Life">
 <meta property="og:description" content="上善若水，人淡如菊">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title> Hello Life </title>
+  <title> 归档 | Hello Life </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +92,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column  page-archive ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -181,107 +179,59 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-    
-    
+    <span class="archive-page-counter">
       
       
+      
         
-        
-        
+      
+      嗯..! 目前共计 9 篇日志。 继续努力。
+    </span>
+
+    
+
+      
+      
       
 
       
-    
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/08/2016-four/" itemprop="url">
-                  2016展望
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-08T09:13:27+08:00" content="2016-02-08">
-              2016-02-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/08/2016-four/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/08/2016-four/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <span itemprop="articleBody">
-            
-              <h3 id="1、拔掉这颗智齿！！">1、拔掉这颗智齿！！</h3><h3 id="2、让陈同学更幸福">2、让陈同学更幸福</h3><h3 id="3、努力工作,争取月薪10K+">3、努力工作,争取月薪10K+</h3><h3 id="4、把握机遇，对事物有更成熟的看法">4、把握机遇，对事物有更成熟的看法</h3><h3 id="5、体重下降一丢丢">5、体重下降一丢丢</h3><h3 id="6、祝愿家人身体健康，万事如意">6、祝愿家人身体健康，万事如意</h3>
-            
-          </span>
+            <a class="post-title-link" href="/2016/02/08/2016-four/" itemprop="url">
+              
+                <span itemprop="name">2016展望</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <footer class="post-footer">
-      
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-02-08T09:13:27+08:00"
+              content="2016-02-08" >
+          02-08
+        </time>
+      </div>
 
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
+
 
 
     
@@ -289,6 +239,7 @@
   </section>
 
   
+
 
 
         </div>
@@ -425,6 +376,12 @@
 
   
   
+  
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
+  
+
 
   
     
@@ -468,6 +425,12 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
