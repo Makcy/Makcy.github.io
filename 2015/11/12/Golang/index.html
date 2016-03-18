@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -32,7 +38,7 @@
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Golang," />
@@ -44,7 +50,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
 
 
 
@@ -63,14 +69,21 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go语言知识点和踩坑总结">
 <meta name="twitter:description" content="安装方式（OSX）1、安装Xcode，需要内置GCC编译Golang中Go和C语言的联合开发模块（Go1.5版本已经实现全面Go语言开发）2、Mac下直接通过Homebrew—&amp;gt;brew install go">
+<meta name="twitter:image" content="http://yoursite.com/images/go1.png">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -79,15 +92,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -95,7 +99,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -124,7 +137,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
@@ -168,7 +181,6 @@
       
 
       
-      
     </ul>
   
 
@@ -180,8 +192,9 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -212,7 +225,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-12T15:00:19+08:00" content="2015-11-12">
               2015-11-12
             </time>
@@ -222,15 +238,11 @@
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/12/Golang/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/12/Golang/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
+          
+
+          
           
 
         </div>
@@ -238,17 +250,17 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h2 id="安装方式（OSX）">安装方式（OSX）</h2><p>1、安装Xcode，需要内置GCC编译Golang中Go和C语言的联合开发模块（Go1.5版本已经实现全面Go语言开发）<br>2、Mac下直接通过Homebrew—&gt;brew install go<a id="more"></a></p>
+        <h2 id="安装方式（OSX）"><a href="#安装方式（OSX）" class="headerlink" title="安装方式（OSX）"></a>安装方式（OSX）</h2><p>1、安装Xcode，需要内置GCC编译Golang中Go和C语言的联合开发模块（Go1.5版本已经实现全面Go语言开发）<br>2、Mac下直接通过Homebrew—&gt;brew install go<a id="more"></a></p>
 <ul>
 <li>安装完毕后brew安装路径目录如图所示：<br><img src="/images/go1.png" alt="image"></li>
 </ul>
-<h2 id="工作区间结构">工作区间结构</h2><p><img src="/images/go2.png" alt="image"></p>
+<h2 id="工作区间结构"><a href="#工作区间结构" class="headerlink" title="工作区间结构"></a>工作区间结构</h2><p><img src="/images/go2.png" alt="image"></p>
 <blockquote>
 <p>Golang的工作空间必须包含以上三个文件夹，在本地的安装目录中也出现了这三类文件夹</p>
 <p>当然你也已选择不配置，直接在系统安装目录下进行开发，不过这肯定是极不推荐的方式，我们必须得另建工作环境</p>
@@ -262,49 +274,55 @@
 <p><strong>pkg—&gt; 存放编译好的包文件，通过<code>go install</code>产生.a结尾的包文件(注意：想要产生包文件，所编译的.go文件中必须不能包含main方法，否则会自动执行<code>go build</code>命令，直接在bin目录下生成可执行文件)</strong></p>
 <p><strong>bin—&gt; 通过go build命令在该目录下能生成一个可执行文件</strong></p>
 <hr>
-<h2 id="代码结构">代码结构</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>(</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">	log.Println(<span class="string">"Hello Golang"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>(</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">func</span> main() &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">	log.Println(<span class="string">"Hello Golang"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>需要注意如下概念</strong></p>
 <blockquote>
 <p><strong>1、顶部声明包名（必须，可自定义）</strong><br><strong>2、import中导入所需要的包 </strong><br><strong>3、pacgeage main 中必须包含一个main函数，也就是所谓的入口函数</strong><br><strong>4、只有包含main 函数的 main包文件 才能够通过 <code>go run xxx.go</code> 方法执行</strong><br><strong>5、倘若有很多.go文件属于main包，那么需要同时执行所有.go文件，执行命令<code>go run  *.go</code></strong></p>
 </blockquote>
-<h2 id="第三方包管理">第三方包管理</h2><blockquote>
+<h2 id="第三方包管理"><a href="#第三方包管理" class="headerlink" title="第三方包管理"></a>第三方包管理</h2><blockquote>
 <p><strong>通过<code>go get</code> 包名<code>命令，可以直接获取远程第三方源码，并自动执行</code>go install` 命令，在pkg文件夹下生产相应地包</strong></p>
 <p><strong>不过有些package下载源可能出现了问题（比如google的websocket)，那么可以去“golang中国”里寻找</strong></p>
 </blockquote>
-<h2 id="Go的优势">Go的优势</h2><blockquote>
+<h2 id="Go的优势"><a href="#Go的优势" class="headerlink" title="Go的优势"></a>Go的优势</h2><blockquote>
 <p><strong>部署方便—&gt;</strong>GO是一个强类型静态语言，可以把代码编译为本地机器指令。它的RUNTIME是会在编译时一起链接到执行文件中，这也就意味着我们不需要像JAVA那样装一个JVM。而且编译出的执行文件本身不依赖于其他动态库，完全可以做到轻松的发布。当然，如果你用GO编写了调用一些动态库接口的代码，那么还是需要根据实际情况来部署这个动态库.</p>
 <p><strong>特性少，语法简单—&gt;</strong>GO是崇尚极简主义,GO的特性很少，很多GO的使用者都反馈，GO的关键字至少完全可以记在大脑里。同时它的语法极为简单，而且语义清晰.</p>
 <p><strong>内建的并发原语—&gt;</strong>廉价的goroutine可以让我们欢快的处理异步任务，channel可以用来交换数据。借助goroutine，可以很容易的实现高性能的服务端。</p>
 </blockquote>
 <hr>
-<h2 id="并发机制">并发机制</h2><blockquote>
+<h2 id="并发机制"><a href="#并发机制" class="headerlink" title="并发机制"></a>并发机制</h2><blockquote>
 <p><strong>goroutine是Go并行设计的核心。</strong>goroutine说到底其实就是线程，但是它比线程更小，十几个goroutine可能体现在底层就是五六个线程，Go语言内部帮你实现了这些goroutine之间的内存共享。执行goroutine只需极少的栈内存(大概是4~5KB)，当然会根据相应的数据伸缩。也正因为如此，可同时运行成千上万个并发任务。goroutine比thread更易用、更高效、更轻便。</p>
 <p><strong>goroutine是通过Go的runtime管理的一个线程管理器。goroutine通过go关键字实现了，其实就是一个普通的函数.</strong></p>
 <p><code>并且能实现cpu的调度，自由使用cpu核数量</code></p>
 </blockquote>
 <hr>
-<h2 id="线程间的通信–Channel">线程间的通信–Channel</h2><blockquote>
+<h2 id="线程间的通信–Channel"><a href="#线程间的通信–Channel" class="headerlink" title="线程间的通信–Channel"></a>线程间的通信–Channel</h2><blockquote>
 <p><strong>1、channel可以与Unix shell 中的双向管道做类比：</strong>可以通过它发送或者接收值。这些值只能是特定的类型：channel类型。定义一个channel时，也需要定义发送到channel的值的类型</p>
 <p><strong>2、默认情况下，channel接收和发送数据都是阻塞的，除非另一端已经准备好，这样就使得Goroutines同步变的更加的简单，而不需要显式的lock。</strong>所谓<code>阻塞</code>，也就是如果读取（value := &lt;-ch）它将会被阻塞，直到有数据接收。其次，任何发送（ch&lt;-5）将会被阻塞，直到数据被读出。无缓冲channel是在多个goroutine之间同步很棒的工具。</p>
 <p><strong>3、</strong>如果同时有多个Channel，可以通过select 关键字进行自动选择未阻塞的Channel 来进行相关的操作</p>
 </blockquote>
 <hr>
-<h2 id="Struct与interface类型">Struct与interface类型</h2><blockquote>
+<h2 id="Struct与interface类型"><a href="#Struct与interface类型" class="headerlink" title="Struct与interface类型"></a>Struct与interface类型</h2><blockquote>
 <p><strong>1、</strong>在Go中没有Class 关键字，但是通过Struct结构实现了Class 的功能。<br><strong>2、</strong>如果需要实现继承，只需要进行Struct的嵌套<br><strong>3、</strong>interface就是一组抽象方法的集合，它必须由其他非interface类型实现，而不能自我实现，其实本质还是接口，只是写法不同并且添加了新用法罢了<br><strong>4、</strong>空interface(interface{})不包含任何的method，正因为如此，所有的类型都实现了空interface。空interface在我们需要存储任意类型的数值的时候相当有用，因为它可以存储任意类型的数值。<br><strong>5、</strong>如若想取得空interface中的值，可通过断言语句来进行依次判断</p>
 </blockquote>
 <hr>
-<h2 id="Go独有特性">Go独有特性</h2><blockquote>
+<h2 id="Go独有特性"><a href="#Go独有特性" class="headerlink" title="Go独有特性"></a>Go独有特性</h2><blockquote>
 <p><strong>1、</strong>函数能有多个返回值，且调用时可用“_”下划线占位，进行忽略只接收想要的返回值<br><strong>2、</strong>原生支持UTF-8编码<br><strong>3、</strong>函数中defer关键字能，在函数执行完毕之后，进行调用，类似于析构函数<br><strong>4、</strong>可用For 语句配合 range + 集合类型，来进行遍历<br><strong>5、</strong>if条件语句中可使用赋值语句<br><strong>6、</strong>函数中的参数，允许指针传递<br><strong>7、</strong>go项目的main包中必须有main函数.每个package中默认有一个Init初始化函数，可自定义多个init函数，但是业界规范最好是只用一个</p>
 </blockquote>
 <hr>
-<h2 id="Go一些值得注意的小细节">Go一些值得注意的小细节</h2><blockquote>
+<h2 id="Go一些值得注意的小细节"><a href="#Go一些值得注意的小细节" class="headerlink" title="Go一些值得注意的小细节"></a>Go一些值得注意的小细节</h2><blockquote>
 <p><strong>1、</strong>声明的变量和包必须使用到，不然编译报错<br><strong>2、</strong>变量声明 和 函数声明 位置 与市面流行语言相反<br><strong>3、</strong>：=是定义，=是赋值，_表示忽略<br><strong>4、</strong>大写字母开头的函数，默认为Public<br><strong>5、</strong>小写字母开头的函数，默认为Private</p>
 </blockquote>
 <hr>
-<h2 id="一些基于Go的Web框架">一些基于Go的Web框架</h2><blockquote>
+<h2 id="一些基于Go的Web框架"><a href="#一些基于Go的Web框架" class="headerlink" title="一些基于Go的Web框架"></a>一些基于Go的Web框架</h2><blockquote>
 <p><strong>web.go</strong><br><strong>Revel</strong>，类似Java的play框架<br><strong>Macaron</strong><br><strong>goku</strong>，类似asp.net<br><strong>beego</strong>，类似python的tornado和php的ci<br><code>其中最后三个是由国人开发的哦~</code></p>
 </blockquote>
-</span>
+
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -350,25 +368,19 @@
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
 
-
-        
+          
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2015/11/12/Golang/"
-           data-title="Go语言知识点和踩坑总结" data-url="http://yoursite.com/2015/11/12/Golang/">
-      </div>
     
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -396,31 +408,30 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="暮雨潇潇" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="暮雨潇潇" />
           <p class="site-author-name" itemprop="name">暮雨潇潇</p>
+          <p class="site-description motion-element" itemprop="description">上善若水，人淡如菊</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">上善若水，人淡如菊</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              
-          </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -432,7 +443,7 @@
               <span class="links-of-author-item">
                 <a href="https://twitter.com/Makcy_" target="_blank">
                   
-                    <i class="fa fa-twitter"></i> Twitter
+                    <i class="fa fa-github"></i> GitHub
                   
                 </a>
               </span>
@@ -440,7 +451,7 @@
               <span class="links-of-author-item">
                 <a href="https://github.com/makcy" target="_blank">
                   
-                    <i class="fa fa-globe"></i> Github
+                    <i class="fa fa-globe"></i> Others
                   
                 </a>
               </span>
@@ -451,7 +462,8 @@
         
         
 
-        <div class="links-of-author motion-element">
+        
+        <div class="links-of-blogroll motion-element">
           
         </div>
 
@@ -480,7 +492,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -490,7 +503,7 @@
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">暮雨潇潇</span>
 </div>
@@ -502,7 +515,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -511,59 +524,61 @@
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
 
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-  
-  
-
-  
-    
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"makcy"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-    
-     
-
-
-    
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
-
-
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
 
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 
 <script type="text/javascript" id="sidebar.toc.highlight">
   $(document).ready(function () {
@@ -697,7 +712,7 @@
 
     $('.post-toc a').on('click', function (e) {
       e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
       var offset = $(targetSelector).offset().top;
       hasVelocity ?
         html.velocity('stop').velocity('scroll', {
@@ -710,11 +725,12 @@
     });
 
     // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
+    NexT.motion.middleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
+          NexT.utils.displaySidebar();
         }
       }
     };
@@ -723,13 +739,27 @@
 
 
 
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
 
   
   
+  
 
   
-  
+
 
 </body>
 </html>

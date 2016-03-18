@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -32,7 +38,7 @@
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Life," />
@@ -44,7 +50,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
 
 
 
@@ -65,10 +71,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -77,15 +89,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -93,7 +96,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -122,7 +134,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
@@ -166,7 +178,6 @@
       
 
       
-      
     </ul>
   
 
@@ -178,8 +189,9 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -210,7 +222,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-05T23:28:52+08:00" content="2016-01-05">
               2016-01-05
             </time>
@@ -220,15 +235,11 @@
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/05/work_opinion/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/05/work_opinion/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
+          
+
+          
           
 
         </div>
@@ -236,15 +247,21 @@
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><p>&#160;&#160; &#160; &#160;作为一个软狗，曾几何时多想拥有一个自己的技术Blog，来给自己的简历加点分，顺带装装逼。<a id="more"></a><br>&#160;&#160; &#160; &#160;工作之后，当和朋友讨论到搭Blog的时候，大都的想法依旧是将Blog视为简历的加分点。我却更想把Blog当成一个扯扯淡的平台，我觉得为了技术这东西，存在云笔记和脑子中足矣，如果为了简历好看而特意而为之的行为，挺无聊的(毕竟自己水平太菜)，当然如果你以写技术博客为兴趣，给个赞先。倒不如分享一些自己发现的奇技淫巧和一些生活感悟来的自在，况且也会有写下去的欲望嘛。哈哈好吧，我坦白Blog中前几篇也是强行写来为了找工作的，没激情写的也少，唯一多点的那篇Golang的知识点，毕竟亲自给同事分享过还制作了PPT，果断Copy过来，不能浪费:）<br>&#160;&#160; &#160; &#160;谈到职业，我并不知道其他人的想法如何，但也无异于是经济来源或是自身兴趣的展现。大二的时候曾和博士聊到这问题，记得我当时对他说，人在一行干的时日长了，肯定会尽力往高层走。博士当时笑着说为什么要当高层，自由自在不是挺好的嘛，人最大的无能，就是容易被工作所限制，想去却没有胆量去寻求自己的下一份事业。我当时对博士很是不解，不过每次和博士交谈，他那双睿智带光的双眸总能给我留下深刻的印象。后来和博士一家吃过次饭，才知道博士本科和硕士读的都是电力方向，本科毕业在供电局干了两年才继续读了研。然后毅然自学读了计算机，考上了博士。确实，身边有许多人，不说是中年，在被每天自己为无聊的生活的压榨，却对自己所向往的生活憧憬，也仅仅是憧憬了。是说他们忘却初心？或许也便如博士所说对新事物的怯懦，又或是迫于生活上的各种限制。其实我并不完全认同博士的看法，倘若有机会进入高层，果断去啊，职业决定了你的现在，并没有限制你的一生。</p>
+        <p>&#160;&#160; &#160; &#160;作为一个软狗，曾几何时多想拥有一个自己的技术Blog，来给自己的简历加点分，顺带装装逼。<a id="more"></a><br>&#160;&#160; &#160; &#160;工作之后，当和朋友讨论到搭Blog的时候，大都的想法依旧是将Blog视为简历的加分点。我却更想把Blog当成一个扯扯淡的平台，我觉得为了技术这东西，存在云笔记和脑子中足矣，如果为了简历好看而特意而为之的行为，挺无聊的(毕竟自己水平太菜)，当然如果你以写技术博客为兴趣，给个赞先。倒不如分享一些自己发现的奇技淫巧和一些生活感悟来的自在，况且也会有写下去的欲望嘛。哈哈好吧，我坦白Blog中前几篇也是强行写来为了找工作的，没激情写的也少，唯一多点的那篇Golang的知识点，毕竟亲自给同事分享过还制作了PPT，果断Copy过来，不能浪费:）<br>&#160;&#160; &#160; &#160;谈到职业，我并不知道其他人的想法如何，但也无异于是经济来源或是自身兴趣的展现。大二的时候曾和博士聊到这问题，记得我当时对他说，人在一行干的时日长了，肯定会尽力往高层走。博士当时笑着说为什么要当高层，自由自在不是挺好的嘛，人最大的无能，就是容易被工作所限制，想去却没有胆量去寻求自己的下一份事业。我当时对博士很是不解，不过每次和博士交谈，他那双睿智带光的双眸总能给我留下深刻的印象。后来和博士一家吃过次饭，才知道博士本科和硕士读的都是电力方向，本科毕业在供电局干了两年才继续读了研。然后毅然自学读了计算机，考上了博士。确实，身边有许多人，不说是中年，在被每天自己为无聊的生活的压榨，却对自己所向往的生活憧憬，也仅仅是憧憬了。是说他们忘却初心？或许也便如博士所说对新事物的怯懦，又或是迫于生活上的各种限制。其实我并不完全认同博士的看法，倘若有机会进入高层，果断去啊，职业决定了你的现在，并没有限制你的一生。</p>
 <p>——有人问我你喜欢编程吗？<br>——喜欢呀。<br>——那你打算会一直干下去吗？<br>——如果有机遇或到了一定时机有能让家庭过的更好另一份事业，尽管充斥着风险，但是我肯定会考虑尝试，我也喜欢尝试一些其他事业。不过，这必然得先保证家的稳定，不能让其他人承担属于自己的风险。<br>——倘若你放弃了干了这么多年的行业？不后悔吗？<br>——人生苦短，有些事你现在不做，也许就过去了，心里放着一个家，能维持着他们的安稳，即使失败，也便无悔。</p>
-</span>
+
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -290,25 +307,19 @@
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
 
-
-        
+          
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/01/05/work_opinion/"
-           data-title="一丁点职业观" data-url="http://yoursite.com/2016/01/05/work_opinion/">
-      </div>
     
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -336,31 +347,30 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="暮雨潇潇" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="暮雨潇潇" />
           <p class="site-author-name" itemprop="name">暮雨潇潇</p>
+          <p class="site-description motion-element" itemprop="description">上善若水，人淡如菊</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">上善若水，人淡如菊</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              
-          </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -372,7 +382,7 @@
               <span class="links-of-author-item">
                 <a href="https://twitter.com/Makcy_" target="_blank">
                   
-                    <i class="fa fa-twitter"></i> Twitter
+                    <i class="fa fa-github"></i> GitHub
                   
                 </a>
               </span>
@@ -380,7 +390,7 @@
               <span class="links-of-author-item">
                 <a href="https://github.com/makcy" target="_blank">
                   
-                    <i class="fa fa-globe"></i> Github
+                    <i class="fa fa-globe"></i> Others
                   
                 </a>
               </span>
@@ -391,7 +401,8 @@
         
         
 
-        <div class="links-of-author motion-element">
+        
+        <div class="links-of-blogroll motion-element">
           
         </div>
 
@@ -420,7 +431,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -430,7 +442,7 @@
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">暮雨潇潇</span>
 </div>
@@ -442,7 +454,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -451,59 +463,61 @@
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
 
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-  
-  
-
-  
-    
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"makcy"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-    
-     
-
-
-    
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
-
-
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
 
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 
 <script type="text/javascript" id="sidebar.toc.highlight">
   $(document).ready(function () {
@@ -637,7 +651,7 @@
 
     $('.post-toc a').on('click', function (e) {
       e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
       var offset = $(targetSelector).offset().top;
       hasVelocity ?
         html.velocity('stop').velocity('scroll', {
@@ -650,11 +664,12 @@
     });
 
     // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
+    NexT.motion.middleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
+          NexT.utils.displaySidebar();
         }
       }
     };
@@ -663,13 +678,27 @@
 
 
 
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
 
   
   
+  
 
   
-  
+
 
 </body>
 </html>
