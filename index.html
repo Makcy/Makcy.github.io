@@ -217,6 +217,98 @@
             
               
                 
+                <a class="post-title-link" href="/2018/07/20/kong/" itemprop="url">
+                  Kong GateWay
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-07-20T11:33:42+08:00" content="2018-07-20">
+              2018-07-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h2><p>1、安装Docker运行环境以及Npm<br>2、Kong支持cassandra和postgreql两种数据库，这里使用postgresql<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kong-database \</span><br><span class="line">                -p <span class="number">5432</span>:<span class="number">5432</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_USER=kong"</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_DB=kong"</span> \</span><br><span class="line">                postgres:<span class="number">9</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>3、加载Kong并进行数据库migration, <code>截止此时Kong-Dashboard只支持0.13版本Kong</code><br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm \</span><br><span class="line">    -<span class="ruby">-link kong-<span class="symbol">database:</span>kong-database \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_DATABASE=postgres"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_PG_HOST=kong-database"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_CASSANDRA_CONTACT_POINTS=kong-database"</span> \</span></span><br><span class="line"><span class="ruby">    <span class="symbol">kong:</span><span class="number">0</span>.<span class="number">13.1</span> kong migrations up</span></span><br></pre></td></tr></table></figure></p>
+<p>4、启动Kong Container<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kong \</span><br><span class="line">    -<span class="ruby">-link kong-<span class="symbol">database:</span>kong-database \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_DATABASE=postgres"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_PG_HOST=kong-database"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_LOG_LEVEL=info"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_ADMIN_LISTEN=0.0.0.0:8001"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444"</span> \</span></span><br><span class="line"><span class="ruby">    -p <span class="number">8000</span><span class="symbol">:</span><span class="number">8000</span> \</span></span><br><span class="line"><span class="ruby">    -p <span class="number">8443</span><span class="symbol">:</span><span class="number">8443</span> \</span></span><br><span class="line"><span class="ruby">    -p <span class="number">8001</span><span class="symbol">:</span><span class="number">8001</span> \</span></span><br><span class="line"><span class="ruby">    -p <span class="number">8444</span><span class="symbol">:</span><span class="number">8444</span> \</span></span><br><span class="line"><span class="ruby">    <span class="symbol">kong:</span><span class="number">0</span>.<span class="number">13.1</span></span></span><br></pre></td></tr></table></figure></p>
+<p>5、npm isntall -g kong-dashboard<br>6、Kong Dashboard启动！<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kong-dashboard start --kong-url <span class="string">http:</span><span class="comment">//localhost:8001</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/26/RuningCount/" itemprop="url">
                   QQ健康刷步数方法(仅Android无需root)
                 </a>
@@ -353,7 +445,7 @@
           
             <p><strong> 之前在CSDN写的一些设计模式相关的学习笔记,和Unity引擎插件的简单使用 </strong></p>
 <blockquote>
-<p><a href="http://blog.csdn.net/saveword" target="_blank" rel="external">传送门~。~</a></p>
+<p><a href="http://blog.csdn.net/saveword" target="_blank" rel="noopener">传送门~。~</a></p>
 </blockquote>
 
           
@@ -535,7 +627,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/images/dragon.jpg" rel="gallery_cjj4ctbma0000y0jc0czsa6v4"
+                 href="/images/dragon.jpg" rel="gallery_cjjtg2c0n0002mgkkl46gsmd8"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/dragon.jpg" itemprop="contentUrl"/>
               </a>
@@ -618,7 +710,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -628,7 +720,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
