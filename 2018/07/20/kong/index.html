@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="不忘初心 方得始终">
 <meta property="og:description" content="采用Docker快速搭建Kong Api-GateWay &amp;amp; Kong-Dashboard可视化界面1、安装Docker运行环境2、创建docker network1docker network create kong-net 3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql123456docker run -d --name kong-dat">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-28T01:26:50.331Z">
+<meta property="og:updated_time" content="2018-07-28T02:51:10.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kong GateWay 快速搭建">
 <meta name="twitter:description" content="采用Docker快速搭建Kong Api-GateWay &amp;amp; Kong-Dashboard可视化界面1、安装Docker运行环境2、创建docker network1docker network create kong-net 3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql123456docker run -d --name kong-dat">
@@ -340,7 +340,7 @@
       
 
       
-        <h2 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h2><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
+        <h5 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h5><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
 <p>3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kong-database \</span><br><span class="line">                --network=kong-net \</span><br><span class="line">                -p <span class="number">5432</span>:<span class="number">5432</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_USER=kong"</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_DB=kong"</span> \</span><br><span class="line">                postgres:<span class="number">9</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>4、加载Kong并进行数据库migration, <code>截止此时Kong-Dashboard只支持0.13版本Kong</code><br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm \</span><br><span class="line">    -<span class="ruby">-network=kong-net \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_DATABASE=postgres"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_PG_HOST=kong-database"</span> \</span></span><br><span class="line"><span class="ruby">    -e <span class="string">"KONG_CASSANDRA_CONTACT_POINTS=kong-database"</span> \</span></span><br><span class="line"><span class="ruby">    <span class="symbol">kong:</span><span class="number">0</span>.<span class="number">13.1</span> kong migrations up</span></span><br></pre></td></tr></table></figure></p>
@@ -525,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><span class="nav-number">1.</span> <span class="nav-text">采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><span class="nav-number">1.</span> <span class="nav-text">采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</span></a></li></ol></div>
             
 
           </div>

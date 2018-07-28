@@ -342,7 +342,7 @@
 
       
         
-          <h3 id="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"><a href="#在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。" class="headerlink" title="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"></a>在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：<code>Syslog</code>、<code>File-Log</code>以及<code>Http-Log</code>，下面对这三种插件逐一分析一下。</h3>
+          <h5 id="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"><a href="#在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。" class="headerlink" title="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"></a>在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：<code>Syslog</code>、<code>File-Log</code>以及<code>Http-Log</code>，下面对这三种插件逐一分析一下。</h5>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/26/kongLog/#more" rel="contents">
@@ -477,7 +477,7 @@
 
       
         
-          <h2 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h2><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
+          <h5 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h5><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
 <p>3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kong-database \</span><br><span class="line">                --network=kong-net \</span><br><span class="line">                -p <span class="number">5432</span>:<span class="number">5432</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_USER=kong"</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_DB=kong"</span> \</span><br><span class="line">                postgres:<span class="number">9</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1154,7 +1154,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/images/dragon.jpg" rel="gallery_cjk4teahi0000n5jc6oprmluk"
+                 href="/images/dragon.jpg" rel="gallery_cjk4tkelo0000t3jc92beqjq5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/dragon.jpg" itemprop="contentUrl"/>
               </a>
