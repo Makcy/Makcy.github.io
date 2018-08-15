@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="不忘初心 方得始终">
 <meta property="og:description" content="众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T17:35:49.703Z">
+<meta property="og:updated_time" content="2018-08-14T17:54:06.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kong Plugin安装的几种方式">
 <meta name="twitter:description" content="众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装">
@@ -340,7 +340,7 @@
       
 
       
-        <h6 id="众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。-但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。"><a href="#众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。-但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。" class="headerlink" title="众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。"></a>众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。</h6><a id="more"></a>
+        <p>众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。<br><a id="more"></a></p>
 <p>首先，是我认为最方便的安装方式，一般linux机器上都会自带 luarocks（lua包管理程序），这样一来我们只要把 Plugins 所在的文件夹给移动到服务器的任意目录，然后在该目录下，执行<code>luarocks make</code> 这样一来插件便会自动安装到系统中，不过需要注意的是，此时插件还需要进行手动开启，<code>首先进入/etc/kong/目录，然后cp kong.conf.default kong.conf， 这里注意一定要复制一份单独的kong.conf文件，不能直接对kong.conf.default进行修改，这样是不生效的，然后关闭plugin = bundled注释，在末尾增加你的插件名，这里注意插件名是不包含前缀 kong-plugin的，重启Kong即可在可视化界面里发现</code></p>
 <p>还有一种方式是<code>手动安装</code>如果不是对Lua环境要求需求特别高，可以不用折腾。 首先一样，把 Plugin 项目文件放到服务器上，然后自定义你的插件目录，比如<code>/usr/local/custom/kong/plugins</code>，这里注意<code>/kong/plugins</code>之前的可以自定义，但是末尾的<code>/kong/plugins</code>是固定的。然后把插件移到<code>../kong/plugins/</code>内，这里切记插件的项目名称得去掉<code>kong-plugin</code>, 然后和上述一样，修改<code>kong.conf</code>文件中的<code>lua_package_path</code>, 如按例子中的path则填写为<code>/usr/local/custom/?.lua;;</code>，同样重启Kong之后就可以选择自己所写的Plugin了</p>
 
@@ -382,6 +382,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/15/kongaMigrate/" rel="prev" title="Kong Admin GUI之Kong-Dashboard到Konga的过渡">
+                Kong Admin GUI之Kong-Dashboard到Konga的过渡 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -433,17 +437,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -462,7 +457,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -508,22 +503,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。-但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。"><span class="nav-number">1.</span> <span class="nav-text">众所周知，GateWay强大的一面在于可以进行限流，熔断，鉴权等一系列的处理工作，Kong也不例外，对于Kong来说，主要的功能都以Plugin的形式暴露给开发者，社区版的Kong自身带有一些列的Plugin，如果是企业版自带的则支持更多。 但这些相对众多的开发需求，肯定是不能一一满足，也就涉及到一个定制化plugin的问题，定制化Plugin在之后会讲到，这一篇文章主要讲述一些Plugin的安装方式。</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
