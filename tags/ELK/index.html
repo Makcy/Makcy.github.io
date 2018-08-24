@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Kong," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,16 @@
 
 
 
-<meta name="description" content="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。">
-<meta name="keywords" content="Kong">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于Kong的http log插件">
-<meta property="og:url" content="http://yoursite.com/2018/07/26/kongLog/index.html">
+<meta name="description" content="运气选手">
+<meta property="og:type" content="website">
+<meta property="og:title" content="不忘初心 方得始终">
+<meta property="og:url" content="http://yoursite.com/tags/ELK/index.html">
 <meta property="og:site_name" content="不忘初心 方得始终">
-<meta property="og:description" content="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。">
+<meta property="og:description" content="运气选手">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-24T17:11:23.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于Kong的http log插件">
-<meta name="twitter:description" content="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。">
+<meta name="twitter:title" content="不忘初心 方得始终">
+<meta name="twitter:description" content="运气选手">
 
 
 
@@ -120,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/26/kongLog/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/ELK/"/>
 
 
 
 
 
-  <title>基于Kong的http log插件 | 不忘初心 方得始终</title>
+  <title>标签: ELK | 不忘初心 方得始终</title>
   
 
 
@@ -154,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,165 +246,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>ELK<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/26/kongLog/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="风也">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="不忘初心 方得始终">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">基于Kong的http log插件</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/08/22/elkLogServer/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">用ELK进行Kong的日志分析</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T21:11:19+08:00">
-                2018-07-26
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-08-22T01:10:15+08:00"
+              content="2018-08-22" >
+          08-22
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/07/26/kongLog/" class="leancloud_visitors" data-flag-title="基于Kong的http log插件">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h5 id="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"><a href="#在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。" class="headerlink" title="在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"></a>在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：<code>Syslog</code>、<code>File-Log</code>以及<code>Http-Log</code>，下面对这三种插件逐一分析一下。</h5><a id="more"></a>
-<h4 id="Syslog"><a href="#Syslog" class="headerlink" title="Syslog"></a><a href="https://docs.konghq.com/plugins/syslog" target="_blank" rel="noopener">Syslog</a></h4><p>顾名思义，这个插件是把Kong中记录的日志给打印到系统日志中，开启插件之后只需要指定需要使用的API，无需做多余的配置，即可在<code>/var/log/message</code>中发现对应的日志信息，d 但是系统日志鱼龙混杂，如果需要用到ELK等日志分析工具时，需要做一次数据清洗工作。</p>
-<h4 id="File-Log"><a href="#File-Log" class="headerlink" title="File-Log"></a><a href="https://docs.konghq.com/plugins/file-log" target="_blank" rel="noopener">File-Log</a></h4><p>与Syslog一样，File-log的配置也很方便，只需要配置日志路劲就行，开启插件之后，会在对应的对应产生一个logFile。Syslog中提到需要做一些日志清洗工作，但是换成了File-log乍一看好像解决了之前的痛点，实则不然，官方建议这个插件不适合在生产环境中使用，会带来一些性能上的开销，影响正常业务。</p>
-<h4 id="Http-Log"><a href="#Http-Log" class="headerlink" title="Http-Log"></a><a href="https://docs.konghq.com/plugins/http-log" target="_blank" rel="noopener">Http-Log</a></h4><p>http-log是我比较推荐的，它的原理是设置一个log-server地址，然后Kong会把日志通过post请求发送到设置的log-server，然后通过log-server把日志给沉淀下来，相比之前两种插件，这一种只要启一个log-server就好了，出于性能考虑，我用Rust实现了一个<a href="https://github.com/Makcy/log-server" target="_blank" rel="noopener">log-server</a>，有兴趣可以参考看一下。</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Kong/" rel="tag"># Kong</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/07/20/kong/" rel="next" title="Kong GateWay 快速搭建">
-                <i class="fa fa-chevron-left"></i> Kong GateWay 快速搭建
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/04/rustDocker/" rel="prev" title="基于Rust项目的最小Docker镜像的构建">
-                基于Rust项目的最小Docker镜像的构建 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -414,10 +301,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -438,17 +321,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -513,22 +387,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的-free-plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。"><span class="nav-number">1.</span> <span class="nav-text">在上一篇中，Kong已经搭建完成，作为Api-Gateway，各个http请求的日志记录是必不可少的，目前在Kong的 free plugins中，比较常用的有这么三个：Syslog、File-Log以及Http-Log，下面对这三种插件逐一分析一下。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Syslog"><span class="nav-number"></span> <span class="nav-text">Syslog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#File-Log"><span class="nav-number"></span> <span class="nav-text">File-Log</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Http-Log"><span class="nav-number"></span> <span class="nav-text">Http-Log</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -662,10 +520,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

@@ -261,6 +261,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/elkLogServer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="风也">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不忘初心 方得始终">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/22/elkLogServer/" itemprop="url">用ELK进行Kong的日志分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T01:10:15+08:00">
+                2018-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/22/elkLogServer/" class="leancloud_visitors" data-flag-title="用ELK进行Kong的日志分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。<br>目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了<code>Beat + Logstash</code> 又或者是 <code>Beat + Logstash + Queue + Logstash</code>，这里贴一张ELK的架构图，具体不过多描述。<br><img src="https://cdn.image.huoqiuapp.com/archive/image/13ae8758a489e6e7fbc4_1122_577.png" alt="image"><br>我采用的是Filebeat进行日志的收集工作，我们的日志文件格式以<code>JSON</code>为一个最小单元，使用Filebeat进行手机的时候需要注意，每个JSON对象之间需要有一个换行，不然Filebeat将无法识别，我这有一个<a href="https://github.com/Makcy/elk-analyze-demo" target="_blank" rel="noopener">Demo</a>，里面已经附上了docker-compose文件，只需启动docker-compose便可以看到效果，访问Kibana然后建立Index，便可以看到对应的日志。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/kongaMigrate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -342,7 +473,7 @@
 
       
         
-          <p>由于Kong只在企业版中提供了Admin GUI的功能，所以对于大多数白手起家的开发者来说，寻找一个免费、开源、骚包的Admin GUI是一件非常重要的事， 在之前Kong的快速搭建中我们用的是<code>Kong-Dashborad</code>，这个GUI给人的第一感觉就是太Low逼了，并且只支持到了Kong 0.13.0，要不是找不到合适的我说什么也不会用它。直到某一天，发现了一个神器 <code>Konga</code>，不仅支持了Kong的最新版本（service和route的拆分新特性）同时支持管理员的权限控制和多个Kong连接池的管理。<br>
+          <p>由于Kong只在企业版中提供了Admin GUI的功能，所以对于大多数白手起家的开发者来说，寻找一个免费、开源、骚包的Admin GUI是一件非常重要的事， 在之前Kong的快速搭建中用的是<code>Kong-Dashborad</code>，这个GUI给人的第一感觉就是太Low逼了，并且只支持到了Kong 0.13.0，要不是找不到合适的我说什么也不会用它。直到某一天，发现了一个神器 <code>Konga</code>，不仅支持了Kong的最新版本（service和route的拆分新特性）同时支持管理员的权限控制和多个Kong连接池的管理。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/15/kongaMigrate/#more" rel="contents">
@@ -1463,160 +1594,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/11/Gamelife/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="风也">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="不忘初心 方得始终">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/11/11/Gamelife/" itemprop="url">漫漫游戏路</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-11T12:55:19+08:00">
-                2015-11-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2015/11/11/Gamelife/" class="leancloud_visitors" data-flag-title="漫漫游戏路">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/images/dragon.jpg" rel="gallery_cjkv3sfhe0000xfkkh1v4oca4"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/dragon.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <p>&#160; &#160; &#160; &#160;回头想想，从上一家游戏公司离职已快三个月了。在那工作期间认识了很多不错的同事，也让我这个初次涉猎社会的大学狗体会到了家和校园之外的温暖。同时也制作了自己人生第一款商业游戏，游戏生涯算是完美告一段落。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/11/11/Gamelife/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1664,7 +1648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1677,7 +1661,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
