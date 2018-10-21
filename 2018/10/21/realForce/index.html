@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ELK,Kong," />
+  <meta name="keywords" content="Idea," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
-<meta name="keywords" content="ELK,Kong">
+<meta name="description" content="之前有幸碰了一段时间数字货币的合约交易（当了一回韭菜）。开着20倍杠杆看着每秒钟收益率在[100%, 100%]之间来回浮动，小心脏有些受不了。当时和基友每天分析着开单的规律和各种骚操作，最终还是不敌市场的大规律，在一晚的大砸盘中，梭哈的多单直接被爆仓。这件事也算是告一段落，之后和基友市场琢磨着能不能写一个合约量化的分析脚本，通过封装自己的各种策略，以达到0精力挂机赚钱的目的。现实是骨感的，由于当">
+<meta name="keywords" content="Idea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用ELK进行Kong的日志分析">
-<meta property="og:url" content="http://yoursite.com/2018/08/22/elkLogServer/index.html">
+<meta property="og:title" content="基于okex的合约量化想法">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/realForce/index.html">
 <meta property="og:site_name" content="不忘初心 方得始终">
-<meta property="og:description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
+<meta property="og:description" content="之前有幸碰了一段时间数字货币的合约交易（当了一回韭菜）。开着20倍杠杆看着每秒钟收益率在[100%, 100%]之间来回浮动，小心脏有些受不了。当时和基友每天分析着开单的规律和各种骚操作，最终还是不敌市场的大规律，在一晚的大砸盘中，梭哈的多单直接被爆仓。这件事也算是告一段落，之后和基友市场琢磨着能不能写一个合约量化的分析脚本，通过封装自己的各种策略，以达到0精力挂机赚钱的目的。现实是骨感的，由于当">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cdn.image.huoqiuapp.com/archive/image/13ae8758a489e6e7fbc4_1122_577.png">
-<meta property="og:updated_time" content="2018-08-24T17:27:53.244Z">
+<meta property="og:updated_time" content="2018-10-21T07:34:57.415Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用ELK进行Kong的日志分析">
-<meta name="twitter:description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
-<meta name="twitter:image" content="https://cdn.image.huoqiuapp.com/archive/image/13ae8758a489e6e7fbc4_1122_577.png">
+<meta name="twitter:title" content="基于okex的合约量化想法">
+<meta name="twitter:description" content="之前有幸碰了一段时间数字货币的合约交易（当了一回韭菜）。开着20倍杠杆看着每秒钟收益率在[100%, 100%]之间来回浮动，小心脏有些受不了。当时和基友每天分析着开单的规律和各种骚操作，最终还是不敌市场的大规律，在一晚的大砸盘中，梭哈的多单直接被爆仓。这件事也算是告一段落，之后和基友市场琢磨着能不能写一个合约量化的分析脚本，通过封装自己的各种策略，以达到0精力挂机赚钱的目的。现实是骨感的，由于当">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/22/elkLogServer/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/21/realForce/"/>
 
 
 
 
 
-  <title>用ELK进行Kong的日志分析 | 不忘初心 方得始终</title>
+  <title>基于okex的合约量化想法 | 不忘初心 方得始终</title>
   
 
 
@@ -264,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/elkLogServer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/21/realForce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="风也">
@@ -281,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用ELK进行Kong的日志分析</h1>
+          <h1 class="post-title" itemprop="name headline">基于okex的合约量化想法</h1>
         
 
         <div class="post-meta">
@@ -293,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T01:10:15+08:00">
-                2018-08-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-21T14:43:36+08:00">
+                2018-10-21
               </time>
             
 
@@ -311,7 +309,7 @@
 
           
           
-             <span id="/2018/08/22/elkLogServer/" class="leancloud_visitors" data-flag-title="用ELK进行Kong的日志分析">
+             <span id="/2018/10/21/realForce/" class="leancloud_visitors" data-flag-title="基于okex的合约量化想法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -342,7 +340,7 @@
       
 
       
-        <p>之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。<br>目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了<code>Beat + Logstash</code> 又或者是 <code>Beat + Logstash + Queue + Logstash</code>，这里贴一张ELK的架构图，具体不过多描述。<br><img src="https://cdn.image.huoqiuapp.com/archive/image/13ae8758a489e6e7fbc4_1122_577.png" alt="image"><br>我采用的是Filebeat进行日志的收集工作，我们的日志文件格式以<code>JSON</code>为一个最小单元，使用Filebeat进行手机的时候需要注意，每个JSON对象之间需要有一个换行，不然Filebeat将无法识别，我这有一个<a href="https://github.com/Makcy/elk-analyze-demo" target="_blank" rel="noopener">Demo</a>，里面已经附上了docker-compose文件，只需启动docker-compose便可以看到效果，访问Kibana然后建立Index，便可以看到对应的日志。</p>
+        <p>之前有幸碰了一段时间数字货币的合约交易（当了一回韭菜）。开着20倍杠杆看着每秒钟收益率在[100%, 100%]之间来回浮动，小心脏有些受不了。当时和基友每天分析着开单的规律和各种骚操作，最终还是不敌市场的大规律，在一晚的大砸盘中，梭哈的多单直接被爆仓。这件事也算是告一段落，之后和基友市场琢磨着能不能写一个合约量化的分析脚本，通过封装自己的各种策略，以达到0精力挂机赚钱的目的。现实是骨感的，由于当时okex并没有开放合约交易的API，加上交易所的重重安全验证，所以没有花过多时间去思考。直到上周，基友在偶然中发现了API的开放，这件事又开始燃起了大家的激情，这里开坑来记录一下开发历程，项目名取作<a href="(https://github.com/Makcy/realforce">realforce</a>)是因为前几天刚入了一把realforce r2 全域30g的静音款，作为体验过众多键盘手感的轻度发烧友，觉得这款键盘的手感简直不能太赞，同时也希望有一种realforce to making money!<br><a id="more"></a><br>目前项目预想阶段，最近一段时间工作相对繁忙，先给自己埋几个比较重要的issue<br>1、策略插拔模块，其中策略模块可以划分为，止盈策略，止损策略，行情预测策略等<br>2、风险控制模块，比如横盘的时候终止操作，或者小规模操作；砸盘或者拉盘的时候能够顺水推舟<br>3、高级策略模块。后续支持对冲套利，触发单预测等等<br>4、告警通知模块<br>5、账户合约体系控制<br>6、操作日志分析模块<br>…<br>有想到的后续继续加上，希望自己之后有时间和能力把这个idea给实现，也算是满足自己一个心愿。</p>
 
       
     </div>
@@ -360,9 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ELK/" rel="tag"># ELK</a>
-          
-            <a href="/tags/Kong/" rel="tag"># Kong</a>
+            <a href="/tags/Idea/" rel="tag"># Idea</a>
           
         </div>
       
@@ -375,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/15/kongaMigrate/" rel="next" title="Kong Admin GUI之Kong-Dashboard到Konga的过渡">
-                <i class="fa fa-chevron-left"></i> Kong Admin GUI之Kong-Dashboard到Konga的过渡
+              <a href="/2018/08/22/elkLogServer/" rel="next" title="用ELK进行Kong的日志分析">
+                <i class="fa fa-chevron-left"></i> 用ELK进行Kong的日志分析
               </a>
             
           </div>
@@ -384,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/21/realForce/" rel="prev" title="基于okex的合约量化想法">
-                基于okex的合约量化想法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
