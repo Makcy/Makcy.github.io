@@ -6,10 +6,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Kong,ELK," />
+  <meta name="keywords" content="ELK,Kong,">
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
-<meta name="keywords" content="Kong,ELK">
+<meta name="keywords" content="ELK,Kong">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用ELK进行Kong的日志分析">
 <meta property="og:url" content="http://yoursite.com/2018/08/22/elkLogServer/index.html">
@@ -88,7 +88,7 @@
 <meta property="og:description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.image.huoqiuapp.com/archive/image/13ae8758a489e6e7fbc4_1122_577.png">
-<meta property="og:updated_time" content="2018-08-24T17:27:53.244Z">
+<meta property="og:updated_time" content="2019-07-09T07:39:16.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用ELK进行Kong的日志分析">
 <meta name="twitter:description" content="之前我们用了LogServer来讲Kong的日志进行一个落地，既然数据源有了，那么接下来的工作必然是对日志进行一个分析，使日志物尽其用达到其应有的效果。目前比较主流的日志分析方案是ELK(Elasticsearch + Logstash + Kibana)进行一个日志的分析，当然之后Logstash这一日志收集和过滤层演变为了Beat + Logstash 又或者是 Beat + Logstash">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/22/elkLogServer/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/22/elkLogServer/">
 
 
 
@@ -149,7 +149,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -159,13 +159,13 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">不忘初心 方得始终</span>
         <span class="logo-line-after"><i></i></span>
@@ -195,7 +195,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -205,7 +205,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -215,7 +215,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -225,7 +225,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -259,20 +259,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/elkLogServer/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="风也">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="不忘初心 方得始终">
     </span>
 
@@ -360,9 +360,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Kong/" rel="tag"># Kong</a>
-          
             <a href="/tags/ELK/" rel="tag"># ELK</a>
+          
+            <a href="/tags/Kong/" rel="tag"># Kong</a>
           
         </div>
       
@@ -384,6 +384,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/09/apm/" rel="prev" title="Elastic APM接入实践">
+                Elastic APM接入实践 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -438,11 +442,9 @@
 
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.jpg"
-                alt="风也" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="风也">
             
               <p class="site-author-name" itemprop="name">风也</p>
               <p class="site-description motion-element" itemprop="description">a lucky player</p>
@@ -455,7 +457,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -468,7 +470,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -515,7 +517,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
