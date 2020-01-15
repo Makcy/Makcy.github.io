@@ -361,7 +361,7 @@
 <p><strong>pkg—&gt; 存放编译好的包文件，通过<code>go install</code>产生.a结尾的包文件(注意：想要产生包文件，所编译的.go文件中必须不能包含main方法，否则会自动执行<code>go build</code>命令，直接在bin目录下生成可执行文件)</strong></p>
 <p><strong>bin—&gt; 通过go build命令在该目录下能生成一个可执行文件</strong></p>
 <hr>
-<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>(</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">)</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">	log.Println(<span class="string">"Hello Golang"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span>(</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">)</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">	log.Println(<span class="string">"Hello Golang"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>需要注意如下概念</strong></p>
 <blockquote>
 <p><strong>1、顶部声明包名（必须，可自定义）</strong><br><strong>2、import中导入所需要的包 </strong><br><strong>3、pacgeage main 中必须包含一个main函数，也就是所谓的入口函数</strong><br><strong>4、只有包含main 函数的 main包文件 才能够通过 <code>go run xxx.go</code> 方法执行</strong><br><strong>5、倘若有很多.go文件属于main包，那么需要同时执行所有.go文件，执行命令<code>go run  *.go</code></strong></p>
@@ -537,7 +537,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

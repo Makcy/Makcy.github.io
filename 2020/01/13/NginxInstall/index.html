@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="以CentOS7.1为例 1、源码编译  各版本地址传送门  下载目标版本1wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖1sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安">
+<meta name="description" content="以CentOS7.1为例 1、源码编译 各版本地址传送门  下载目标版本wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安装在/">
 <meta name="keywords" content="Backend">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx三种普遍安装方式">
 <meta property="og:url" content="http://yoursite.com/2020/01/13/NginxInstall/index.html">
 <meta property="og:site_name" content="不忘初心 方得始终">
-<meta property="og:description" content="以CentOS7.1为例 1、源码编译  各版本地址传送门  下载目标版本1wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖1sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安">
+<meta property="og:description" content="以CentOS7.1为例 1、源码编译 各版本地址传送门  下载目标版本wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安装在/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-14T07:52:52.352Z">
+<meta property="og:updated_time" content="2020-01-14T08:57:52.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx三种普遍安装方式">
-<meta name="twitter:description" content="以CentOS7.1为例 1、源码编译  各版本地址传送门  下载目标版本1wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖1sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安">
+<meta name="twitter:description" content="以CentOS7.1为例 1、源码编译 各版本地址传送门  下载目标版本wget https://nginx.org/download/nginx-1.14.2.tar.gz 安装编译所需依赖sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel 使用默认配置生成makefile文件（默认安装在/">
 
 
 
@@ -341,30 +341,28 @@
 
       
         <p>以CentOS7.1为例</p>
-<p><strong>1、源码编译</strong></p>
-<blockquote>
+<h2 id="1、源码编译"><a href="#1、源码编译" class="headerlink" title="1、源码编译"></a>1、源码编译</h2><blockquote>
 <p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">各版本地址传送门</a></p>
 </blockquote>
-<p>下载目标版本<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure></p>
-<p>安装编译所需依赖<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
-<p>使用默认配置生成makefile文件（默认安装在<code>/usr/local/nginx</code>下）<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-http_v2_module</span><br></pre></td></tr></table></figure></p>
-<p>开始编译<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
-<p>启动<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure></p>
+<p>下载目标版本<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>安装编译所需依赖<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
+<p>使用默认配置生成makefile文件（默认安装在<code>/usr/local/nginx</code>下）<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-http_v2_module</span><br></pre></td></tr></table></figure></p>
+<p>开始编译<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p>启动<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<p><strong>2、Yum安装</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install yum-utils</span><br></pre></td></tr></table></figure></p>
+<h2 id="2、Yum安装"><a href="#2、Yum安装" class="headerlink" title="2、Yum安装"></a>2、Yum安装</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo yum install yum-utils</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>yum utils用于管理repository及扩展包，主要为了之后<code>yum-config-manager</code>命令</p>
 </blockquote>
-<p>创建<code>/etc/yum.repos.d/nginx.repo</code>并写入以下内容<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[nginx-stable]</span><br><span class="line">name=nginx stable repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[nginx-mainline]</span><br><span class="line">name=nginx mainline repo</span><br><span class="line">baseurl=http://nginx.org/packages/mainline/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=0</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>创建<code>/etc/yum.repos.d/nginx.repo</code>并写入以下内容<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[nginx-stable]</span><br><span class="line">name=nginx stable repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[nginx-mainline]</span><br><span class="line">name=nginx mainline repo</span><br><span class="line">baseurl=http://nginx.org/packages/mainline/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=0</span><br><span class="line">gpgkey=https://nginx.org/keys/nginx_signing.key</span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>nginx几个版本介绍：<br>Mainline（开发版本）Stable（稳定版）Legacy（遗留下老版本的稳定版）</p>
 </blockquote>
-<p>默认情况下，安装的是第一个<code>稳定版</code>的源，若想安装开发版，可以执行以下命令<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager --<span class="built_in">enable</span> nginx-mainline</span><br></pre></td></tr></table></figure></p>
-<p>最后<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure></p>
-<p><strong>3、Docker安装</strong></p>
-<p>首先安装Docker，通过官方脚本一键安装，获取Docker CE最新稳定版<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh --mirror Aliyun</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker </span><br><span class="line">sudo systemctl start docker</span><br><span class="line">docker run hello-world （测试docker是否安装正确）</span><br></pre></td></tr></table></figure></p>
-<p>拉取镜像<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name nginx -p 80:80 -d nginx:latest</span><br></pre></td></tr></table></figure></p>
-<p>生成宿主机配置文件（下面宿主机文件位置仅供演示）<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> nginx &amp;&amp; <span class="keyword">cd</span> nginx </span><br><span class="line">docker <span class="keyword">cp</span> nginx:/etc/nginx <span class="keyword">conf</span>（配置文件）</span><br><span class="line">docker <span class="keyword">cp</span> nginx-tes<span class="variable">t:</span>/var/<span class="built_in">log</span>/nginx/ <span class="built_in">log</span> （日志）</span><br><span class="line">docker <span class="keyword">cp</span> nginx-tes<span class="variable">t:</span>/usr/share/nginx/html html （项目）</span><br><span class="line">docker run --name nginx -d -<span class="keyword">p</span> <span class="number">80</span>:<span class="number">80</span> \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/<span class="keyword">lo</span><span class="variable">g:</span>/var/<span class="built_in">log</span>/nginx \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/htm<span class="variable">l:</span>/usr/share/nginx/html \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/<span class="keyword">conf</span>:/etc/nginx \</span><br><span class="line">           nginx</span><br></pre></td></tr></table></figure></p>
+<p>默认情况下，安装的是第一个<code>稳定版</code>的源，若想安装开发版，可以执行以下命令<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo yum-config-manager --<span class="built_in">enable</span> nginx-mainline</span><br></pre></td></tr></table></figure></p>
+<p>最后<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、Docker安装"><a href="#3、Docker安装" class="headerlink" title="3、Docker安装"></a>3、Docker安装</h2><p>首先安装Docker，通过官方脚本一键安装，获取Docker CE最新稳定版<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh --mirror Aliyun</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker </span><br><span class="line">sudo systemctl start docker</span><br><span class="line">docker run hello-world （测试docker是否安装正确）</span><br></pre></td></tr></table></figure></p>
+<p>拉取镜像<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run --name nginx -p 80:80 -d nginx:latest</span><br></pre></td></tr></table></figure></p>
+<p>生成宿主机配置文件（下面宿主机文件位置仅供演示）<br><figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> nginx &amp;&amp; <span class="keyword">cd</span> nginx </span><br><span class="line">docker <span class="keyword">cp</span> nginx:/etc/nginx <span class="keyword">conf</span>（配置文件）</span><br><span class="line">docker <span class="keyword">cp</span> nginx-tes<span class="variable">t:</span>/var/<span class="built_in">log</span>/nginx/ <span class="built_in">log</span> （日志）</span><br><span class="line">docker <span class="keyword">cp</span> nginx-tes<span class="variable">t:</span>/usr/share/nginx/html html （项目）</span><br><span class="line">docker run --name nginx -d -<span class="keyword">p</span> <span class="number">80</span>:<span class="number">80</span> \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/<span class="keyword">lo</span><span class="variable">g:</span>/var/<span class="built_in">log</span>/nginx \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/htm<span class="variable">l:</span>/usr/share/nginx/html \</span><br><span class="line">           -v `<span class="keyword">pwd</span>`/<span class="keyword">conf</span>:/etc/nginx \</span><br><span class="line">           nginx</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -455,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -486,7 +493,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -519,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、源码编译"><span class="nav-number">1.</span> <span class="nav-text">1、源码编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Yum安装"><span class="nav-number">2.</span> <span class="nav-text">2、Yum安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、Docker安装"><span class="nav-number">3.</span> <span class="nav-text">3、Docker安装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

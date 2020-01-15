@@ -343,15 +343,14 @@
       
         
           <p>以CentOS7.1为例</p>
-<p><strong>1、源码编译</strong></p>
-<blockquote>
+<h2 id="1、源码编译"><a href="#1、源码编译" class="headerlink" title="1、源码编译"></a>1、源码编译</h2><blockquote>
 <p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener">各版本地址传送门</a></p>
 </blockquote>
-<p>下载目标版本<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure></p>
-<p>安装编译所需依赖<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
-<p>使用默认配置生成makefile文件（默认安装在<code>/usr/local/nginx</code>下）<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-http_v2_module</span><br></pre></td></tr></table></figure></p>
-<p>开始编译<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
-<p>启动<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure></p>
+<p>下载目标版本<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>安装编译所需依赖<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
+<p>使用默认配置生成makefile文件（默认安装在<code>/usr/local/nginx</code>下）<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-pcre --with-http_gzip_static_module --with-http_v2_module</span><br></pre></td></tr></table></figure></p>
+<p>开始编译<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p>启动<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/13/NginxInstall/#more" rel="contents">
@@ -559,7 +558,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/22/VscodePlugin/" itemprop="url">Vscode Plugin开发探索（持续更新）</a></h1>
+                <a class="post-title-link" href="/2019/12/22/VscodePlugin/" itemprop="url">Vscode Plugin开发入门探索</a></h1>
         
 
         <div class="post-meta">
@@ -589,7 +588,7 @@
 
           
           
-             <span id="/2019/12/22/VscodePlugin/" class="leancloud_visitors" data-flag-title="Vscode Plugin开发探索（持续更新）">
+             <span id="/2019/12/22/VscodePlugin/" class="leancloud_visitors" data-flag-title="Vscode Plugin开发入门探索">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -621,12 +620,19 @@
 
       
         
-          
-            
-          
+          <p>简单分了三块，开发准备、注册事件、贡献点、插件开发比预想的简单很多，官方文档很详细，主要还是在于创造力</p>
+<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><p>安装vscode 官方专用Plugin脚手架，推荐使用Typescript进行开发<br><figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">npm</span> install -g yo generator-<span class="meta">code</span></span><br><span class="line"><span class="symbol">yo</span> <span class="meta">code</span></span><br></pre></td></tr></table></figure></p>
+<p>然后只要了解下面介绍的三个概念就能按照自己idea很快地制作一款自己的专属插件<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/22/VscodePlugin/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -1557,8 +1563,8 @@
 
       
         
-          <h5 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h5><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
-<p>3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql<br><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kong-database \</span><br><span class="line">                --network=kong-net \</span><br><span class="line">                -p <span class="number">5432</span>:<span class="number">5432</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_USER=kong"</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_DB=kong"</span> \</span><br><span class="line">                postgres:<span class="number">9</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+          <h5 id="采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面"><a href="#采用Docker快速搭建Kong-Api-GateWay-amp-Kong-Dashboard可视化界面" class="headerlink" title="采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面"></a>采用Docker快速搭建Kong Api-GateWay &amp; Kong-Dashboard可视化界面</h5><p>1、安装Docker运行环境<br>2、创建docker network<br><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">docker<span class="built_in"> network </span>create kong-net</span><br></pre></td></tr></table></figure></p>
+<p>3、Kong支持cassandra和postgreql两种数据库，这里使用postgresql<br><figure class="highlight accesslog"><table><tr><td class="code"><pre><span class="line">docker run -d --name kong-database \</span><br><span class="line">                --network=kong-net \</span><br><span class="line">                -p <span class="number">5432</span>:<span class="number">5432</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_USER=kong"</span> \</span><br><span class="line">                -e <span class="string">"POSTGRES_DB=kong"</span> \</span><br><span class="line">                postgres:<span class="number">9</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/20/kong/#more" rel="contents">
@@ -2203,7 +2209,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

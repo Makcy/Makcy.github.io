@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Plugin Vscode,">
+  <meta name="keywords" content="效率,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="a lucky player">
-<meta name="keywords" content="Plugin Vscode">
+<meta name="description" content="简单分了三块，开发准备、注册事件、贡献点、插件开发比预想的简单很多，官方文档很详细，主要还是在于创造力 准备安装vscode 官方专用Plugin脚手架，推荐使用Typescript进行开发npm install -g yo generator-codeyo code 然后只要了解下面介绍的三个概念就能按照自己idea很快地制作一款自己的专属插件">
+<meta name="keywords" content="效率">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vscode Plugin开发探索（持续更新）">
+<meta property="og:title" content="Vscode Plugin开发入门探索">
 <meta property="og:url" content="http://yoursite.com/2019/12/22/VscodePlugin/index.html">
 <meta property="og:site_name" content="不忘初心 方得始终">
-<meta property="og:description" content="a lucky player">
+<meta property="og:description" content="简单分了三块，开发准备、注册事件、贡献点、插件开发比预想的简单很多，官方文档很详细，主要还是在于创造力 准备安装vscode 官方专用Plugin脚手架，推荐使用Typescript进行开发npm install -g yo generator-codeyo code 然后只要了解下面介绍的三个概念就能按照自己idea很快地制作一款自己的专属插件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-25T06:36:52.988Z">
+<meta property="og:updated_time" content="2020-01-15T03:09:02.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vscode Plugin开发探索（持续更新）">
-<meta name="twitter:description" content="a lucky player">
+<meta name="twitter:title" content="Vscode Plugin开发入门探索">
+<meta name="twitter:description" content="简单分了三块，开发准备、注册事件、贡献点、插件开发比预想的简单很多，官方文档很详细，主要还是在于创造力 准备安装vscode 官方专用Plugin脚手架，推荐使用Typescript进行开发npm install -g yo generator-codeyo code 然后只要了解下面介绍的三个概念就能按照自己idea很快地制作一款自己的专属插件">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Vscode Plugin开发探索（持续更新） | 不忘初心 方得始终</title>
+  <title>Vscode Plugin开发入门探索 | 不忘初心 方得始终</title>
   
 
 
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vscode Plugin开发探索（持续更新）</h1>
+          <h1 class="post-title" itemprop="name headline">Vscode Plugin开发入门探索</h1>
         
 
         <div class="post-meta">
@@ -309,7 +309,7 @@
 
           
           
-             <span id="/2019/12/22/VscodePlugin/" class="leancloud_visitors" data-flag-title="Vscode Plugin开发探索（持续更新）">
+             <span id="/2019/12/22/VscodePlugin/" class="leancloud_visitors" data-flag-title="Vscode Plugin开发入门探索">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -340,7 +340,66 @@
       
 
       
-        
+        <p>简单分了三块，开发准备、注册事件、贡献点、插件开发比预想的简单很多，官方文档很详细，主要还是在于创造力</p>
+<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><p>安装vscode 官方专用Plugin脚手架，推荐使用Typescript进行开发<br><figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">npm</span> install -g yo generator-<span class="meta">code</span></span><br><span class="line"><span class="symbol">yo</span> <span class="meta">code</span></span><br></pre></td></tr></table></figure></p>
+<p>然后只要了解下面介绍的三个概念就能按照自己idea很快地制作一款自己的专属插件<br><a id="more"></a></p>
+<h4 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h4><blockquote>
+<p>Activation Events: events upon which your extension becomes active.</p>
+</blockquote>
+<p>事件写在插件所在项目的package.json中，后面可以发现一款插件package.json文件中定义了非常多的内容</p>
+<ul>
+<li>onLanguage</li>
+<li>onCommand</li>
+<li>onDebug</li>
+<li>onDebugInitialConfigurations</li>
+<li>onDebugResolve</li>
+<li>workspaceContains</li>
+<li>onFileSystem</li>
+<li>onView</li>
+<li>onUri</li>
+<li>onWebviewPanel</li>
+<li>*</li>
+</ul>
+<p>以上是Version1.41中支持的响应事件，<a href="https://code.visualstudio.com/api/references/activation-events" target="_blank" rel="noopener">更具体参考文档</a></p>
+<p>这里用一款简单的天气插件demo举例，<a href="https://github.com/makcy/tressa" target="_blank" rel="noopener">源码传送门</a><br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"activationEvents"</span>: [</span><br><span class="line">    <span class="string">"*"</span>,</span><br><span class="line">    <span class="string">"onCommand:weather.refresh"</span></span><br><span class="line">  ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里定义了两个commands</p>
+<ul>
+<li>当vscode启动，自动加载插件，获取天气数据</li>
+<li>用户手动进行天气数据刷新</li>
+</ul>
+<p>这里的 <code>*</code> 表示的就是启动触发事件，第二行的 <code>weather.refresh</code> 是以便用户在 <code>cmd+shift+p</code> 唤出命令面板里可以进行触发事件，之后需要其他事件只需要继续往下添加即可</p>
+<h4 id="贡献点"><a href="#贡献点" class="headerlink" title="贡献点"></a>贡献点</h4><blockquote>
+<p>Contribution Points: static declarations that you make in the package.json Extension Manifest to extend VS Code.</p>
+</blockquote>
+<p>这也是一个声明在Package.json内的配置，可以理解为当前这款插件主要作用在Vscode的哪一部分，目前版本支持以下定制</p>
+<ul>
+<li>configuration</li>
+<li>configurationDefaults</li>
+<li>commands</li>
+<li>menus</li>
+<li>keybindings</li>
+<li>languages</li>
+<li>debuggers</li>
+<li>breakpoints</li>
+<li>grammars</li>
+<li>themes</li>
+<li>snippets</li>
+<li>jsonValidation</li>
+<li>views</li>
+<li>viewsContainers</li>
+<li>problemMatchers</li>
+<li>problemPatterns</li>
+<li>taskDefinitions</li>
+<li>colors</li>
+<li>typescriptServerPlugins</li>
+<li>resourceLabelFormatters</li>
+<li>contributes.configura</li>
+</ul>
+<p>还是以demo为例，我们需要手动调用<code>refresh</code>命令，光在<code>activationEvents</code>里注册事件是不够的，这里只是告诉vscode这个命令可以用来激活，你可以在<code>contribution points</code>里声明上十个命令，但是只有在<code>activationEvents</code>注册过的命令才是会生效的，另外，在<code>contribution points</code>中声明的命令是会出现在命令面板里的<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"commands"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"command"</span>: <span class="string">"weather.refresh"</span>,</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">"Weather: refresh"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>插件只有 <code>activate</code> 和 <code>deactivate</code> 两种状态，所以当在<code>contribution points</code>中声明好命令，在<code>activationEvents</code>中注册好之后，只要通过<a href="https://code.visualstudio.com/api/references/vscode-api" target="_blank" rel="noopener">Vscode API</a> 在 <code>extension.ts</code> 中完善好事件处理就行了<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">activate</span>(<span class="params">context: vscode.ExtensionContext</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">await</span> display();</span><br><span class="line">	<span class="keyword">let</span> disposable = vscode.commands.registerCommand(<span class="string">'weather.refresh'</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">		<span class="keyword">await</span> display();</span><br><span class="line">	&#125;);</span><br><span class="line">	context.subscriptions.push(disposable);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// this method is called when your extension is deactivated</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">deactivate</span>(<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>有很多插件支持定制化配置面板，这个也是通过 <code>contribution points</code> 来实现的，配置支持多种交互方式，这里以最简单的单选框为例<br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"configuration"</span>: &#123;</span><br><span class="line">			<span class="attr">"type"</span>: <span class="string">"object"</span>,</span><br><span class="line">			<span class="attr">"title"</span>: <span class="string">"Weather"</span>,</span><br><span class="line">			<span class="attr">"properties"</span>: &#123;</span><br><span class="line">				<span class="attr">"weather.weather.display"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"boolean"</span>,</span><br><span class="line">					<span class="attr">"default"</span>: <span class="literal">true</span>,</span><br><span class="line">					<span class="attr">"description"</span>: <span class="string">"展示"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="attr">"weather.temperature.display"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"boolean"</span>,</span><br><span class="line">					<span class="attr">"default"</span>: <span class="literal">true</span>,</span><br><span class="line">					<span class="attr">"description"</span>: <span class="string">"展示"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				<span class="attr">"weather.city.display"</span>: &#123;</span><br><span class="line">					<span class="attr">"type"</span>: <span class="string">"boolean"</span>,</span><br><span class="line">					<span class="attr">"default"</span>: <span class="literal">true</span>,</span><br><span class="line">					<span class="attr">"description"</span>: <span class="string">"展示"</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>声明完成之后便可以通过 <code>cmd + ,</code> 的配置中心中找到插件配置面板，在处理函数中可以通过<code>vscode.workspace.getConfiguration(section?: string)</code>来获取配置</p>
+
       
     </div>
     
@@ -357,7 +416,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Plugin-Vscode/" rel="tag"># Plugin Vscode</a>
+            <a href="/tags/效率/" rel="tag"># 效率</a>
           
         </div>
       
@@ -434,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -465,7 +533,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -498,6 +566,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注册事件"><span class="nav-number">2.</span> <span class="nav-text">注册事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#贡献点"><span class="nav-number">3.</span> <span class="nav-text">贡献点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置文件"><span class="nav-number">4.</span> <span class="nav-text">配置文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
